@@ -1,0 +1,92 @@
+﻿<Page x:Class="Aiplane_Work.pages.EditPAge"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Aiplane_Work.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1200"
+      Title="EditPAge">
+
+
+
+    <Grid Background="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+
+
+            <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0 100 0 0">
+
+                <Label Content="Страница редактирование данных" FontSize="35"/>
+
+            </StackPanel>
+
+
+            <StackPanel HorizontalAlignment="Left" Margin="15 15 0 0">
+
+                <Button x:Name="ButtonBack" Width="100" Content="Выход" Click="ButtonBack_Click"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Grid.Row="0" HorizontalAlignment="Left" Margin="20 200 0 0" VerticalAlignment="Top">
+
+                <StackPanel Margin="0 0 0 15">
+                    <Label Content="Пункт отправления"/>
+                    <TextBox x:Name="tbDeparturePoint" Width="150"/>
+                </StackPanel>
+
+                <StackPanel Margin="0 0 0 15">
+                    <Label Content="Пункт назначения"/>
+                    <TextBox x:Name="tbDestination" Width="150"/>
+                </StackPanel>
+
+                <StackPanel Margin="0 0 0 15">
+                    <Label Content="Дата вылета"/>
+                    <DatePicker x:Name="tbDepartureTime" Width="150"/>
+                </StackPanel>
+
+                <StackPanel Margin="0 0 0 15">
+                    <Label Content="Стоимость билета в ₽"/>
+                    <TextBox x:Name="tbTicketPrice" Width="150"/>
+                </StackPanel>
+
+            </StackPanel>
+
+
+            <StackPanel Orientation="Vertical" Grid.Row="0" HorizontalAlignment="Center" Margin="0 200 0 0" VerticalAlignment="Top">
+
+                <StackPanel Margin="0 0 0 15">
+                    <Label Content="Полное имя пилота"/>
+                    <TextBox x:Name="tbFullName" Width="150"/>
+                </StackPanel>
+
+                <StackPanel Margin="0 0 0 15">
+                    <Label Content="Стаж пилота"/>
+                    <TextBox x:Name="tbWorkExperience" Width="150"/>
+                </StackPanel>
+
+                <StackPanel Margin="0 0 0 15">
+                    <Label Content="Образование пилота"/>
+                    <TextBox x:Name="tbEducation" Width="150"/>
+                </StackPanel>
+
+
+            </StackPanel>
+
+
+
+
+        </Grid>
+
+        <StackPanel Grid.Row="1"   Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Margin="15"  Content="Изменить" x:Name="editbutton" Click="editbutton_Click"/>
+            <Button Margin="15" Content="Очистить поля" x:Name="deletebutton" Click="deletebutton_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Page>
