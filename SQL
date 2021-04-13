@@ -1,0 +1,27 @@
+CREATE DATABASE [AirlineCompany]
+
+USE[AirlineCompany]
+
+
+CREATE TABLE[Airplane]
+(
+[ID] INT PRIMARY KEY IDENTITY (1,1),
+[IDPilot] INT CONSTRAINT FK_Airplane_IDPilot_Pilot_ID FOREIGN KEY REFERENCES [Pilot]([ID]),
+[DeparturePoint] NVARCHAR(MAX),
+[Destination] NVARCHAR(MAX),
+[DepartureTime] DATETIME,
+[TicketPrice] INT
+)
+
+
+CREATE TABLE[Pilot]
+(
+[ID] INT PRIMARY KEY IDENTITY (1,1),
+[FullName] NVARCHAR(MAX),
+[WorkExperience] NVARCHAR(MAX),
+[Education] NVARCHAR(MAX),
+)
+
+
+INSERT [Airplane]([IDPilot], [DeparturePoint], [Destination], [DepartureTime], [TicketPrice]) VALUES ('1','Москва','Краснодар','11-11-11', '1400')
+INSERT [Pilot]([FullName], [WorkExperience], [Education]) VALUES ('Григорьев Дмитрий Александрович','15 лет','СПбГУАП')
